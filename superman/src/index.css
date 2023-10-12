@@ -5,6 +5,9 @@
 .bgImageOne{
     background: url(../src/photos/images/img1.png) no-repeat center center/cover;
 }
+.bgImageEleven{
+    background: url(../src/photos/images/img11.png) no-repeat center center/cover;
+}
 @font-face {
     font-family: "Adventure";
     src: url("../src/fonts/Adventure.otf");
