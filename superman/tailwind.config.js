@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         adventure: ['Adventure', 'sans-serif'],
+        rajdhani: ['Rajdhani-Bold', 'sans-serif'],
+        cantarell: ['Cantarell-Regular', 'sans-serif'],
       }
     },
   },

@@ -9,3 +9,11 @@
     font-family: "Adventure";
     src: url("../src/fonts/Adventure.otf");
 }
+@font-face {
+    font-family: "Rajdhani-Bold";
+    src: url("../src/fonts/Rajdhani-Bold.ttf");
+}
+@font-face {
+    font-family: "Cantarell-Regular";
+    src: url("../src/fonts/Cantarell-Regular.ttf");
+}
