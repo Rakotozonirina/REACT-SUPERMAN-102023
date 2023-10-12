@@ -1,12 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Icons from '../components/Icons'
+import ArticleHero from '../components/homeCompenent/ArticleHero'
 
 function Home() {
 return (
     <div>
-        <header className='w-full h-[100dvh] bgImageOne'>
+        <header className='w-full h-[100dvh] flex flex-col gap-[100px] bgImageOne'>
             <Navbar/>
-            Home
+            <Icons/>
+            <ArticleHero/>
         </header>
     </div>
     
