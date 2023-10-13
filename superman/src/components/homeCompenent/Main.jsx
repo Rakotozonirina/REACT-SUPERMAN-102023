@@ -9,6 +9,8 @@ import ImageSeven from '../../photos/images/img7.png'
 import ImageHeight from '../../photos/images/img8.png'
 import ImageNine from '../../photos/images/img9.png'
 import ImageTen from '../../photos/images/img10.png'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
 
 function Main() {
     const gallery1Images = [
@@ -33,8 +35,40 @@ return (
             <CardImage heading="NÉMÉSIS" para="Superman mène une lutte sans fin contre de nombreux adversaires, son adversaire le plus connu étant le milliardaire Lex Luthor, fils de Lionel Luthor, qui déteste tout ce qu'incarne Superman et finira notamment par devenir président des États-Unis, ce qui participera à faire de lui le pire ennemi de Clark. Doomsday, une abomination génétique qui souhaite tout détruire sur son passage, sera celui qui réussira à tuer Superman. Zod est un kryptonien qui fut condamné à l'emprisonnement dans la Zone Fantôme pour s'être insurgé contre les autorités. Il est libéré et vient sur Terre pour la conquérir mais est arrêté par Superman. Étant kryptonien, Zod possède les mêmes pouvoirs que Superman, et constitue donc l'un de ses plus dangereux adversaires." images={gallery2Images} />
             <CardImage heading="ALLIES" para="Jor-El était le père biologique de Kal-El, ainsi que le savant le plus célèbre de Krypton et un membre influent du Conseil des Sciences. Lorsque Krypton s’effondre il place une version impuissante de lui même dans le vaisseau emportant Kal-El vers la Terre afin de lui apporter les réponses à ses questions quand il grandira. Sur Terre Clark est pris en charge par Jonathan et Martha Kent qui l’élèvent comme leur propre fils. Lorsque John sera mort, Clark pourra compter sur  le soutien indéféctible de sa mère. Une fois engagé au Daily Planet, il rencontrera Loïs Lane qui deviendra sa partenaire et son seul “véritable amour”" images={gallery3Images} />
         </main>
-        <section className='h-[100dvh] w-full px-[3rem] bg-gradient-to-br from-[#000000] to-[#06090e]'>
-            <div className='w-full h-[100dvh] bgImageEleven'></div>
+        <section className='h-[130dvh] flex flex-col items-center w-full px-[3rem] bg-gradient-to-br from-[#000000] to-[#06090e]'>
+            <div className='w-full h-[80dvh] px-[2rem] bgImageEleven grayscale'>
+                <article className='w-full h-[100dvh] bg-black/75 border'>
+                    <h1 className='text-white font-rajdhani text-[36px]'>BATMAN V SUPERMAN</h1>
+                    <p className='text-white font-cantarell text-justify my-4'>Le monde n’est pas assez grand pour deux super héros. Alors que Superman se battait contre Zod, l’affrontement fait des dégats et détruit partiellement la ville de Métropolis. Bruce Wayne alors présent dans la ville assiste, impuissant, à l’effondrement de la ville qui fait beaucoup de victimes. Wayne est alors persuadé que Superman causera un jour la perte de l'Humanité et qu'il est inévitable de se préparer à l'éliminer. Devenu méfiant il se demande si l'homme de fer, cet extraterrestre de Krypton, qui peut à lui seul détruire le monde d'une simple pichenette, décidera un jour de ne plus défendre la Terre, voire même de causer sa perte.</p>
+                    <p className='text-white mb-4 font-cantarell text-justify'>De son côté Superman d’une part cherche à se défendre mais retourne l’offensive contre Batman. Ce dernier n'est plus que l'ombre de lui-même. Devenu un justicier impitoyable, mégalomane et cruel à la suite du meurtre de son ancien partenaire Robin par le Joker, il n'hésite plus à violer son code moral en éliminant et marquant au fer les criminels. Superman souhaite simplement lui rappeler le code moral des “justicier” en usant de la force s’il le faut pour que Batman cesse son comportement abusif.</p>
+                    <section>
+                        <h2 className='text-white font-rajdhani text-[36px]'>MULTIMEDIA</h2>
+                    </section>
+                </article>
+            </div>
+            <Splide aria-label="My Favorite Images" className='border border-red-400' options={{ width: "80%", height: "40dvh", gap: '1rem',}}>
+                <SplideSlide>
+                <div className="centered-slide">
+                    <div className="border border-red-400 h-[40vh] w-[600px]">
+                        {/* Your content for the first slide */}
+                    </div>
+                </div>
+                </SplideSlide>
+                <SplideSlide>
+                <div className="centered-slide">
+                    <div className="border border-blue-400 h-[40vh] w-[600px]">
+                        {/* Your content for the first slide */}
+                    </div>
+                </div>
+                </SplideSlide>
+                <SplideSlide>
+                <div className="centered-slide">
+                    <div className="border border-gray-400 h-[40vh] w-[600px]">
+                        {/* Your content for the third slide */}
+                    </div>
+                </div>
+                </SplideSlide>
+            </Splide>
         </section>
     </>
     

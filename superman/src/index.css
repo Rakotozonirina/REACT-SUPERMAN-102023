@@ -20,3 +20,30 @@
     font-family: "Cantarell-Regular";
     src: url("../src/fonts/Cantarell-Regular.ttf");
 }
+/* Change the right arrow icon */
+.splide__arrow--next{
+    visibility: hidden; /* Change the arrow color */
+}
+.splide__arrow--next::before{
+    visibility: visible;
+    content: "\2192"; /* Unicode arrow character */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #FF5733;
+}
+
+  /* Change the left arrow icon */
+.splide__arrow--prev{
+    visibility: hidden;
+}
+.splide__arrow--prev::before{
+    content: "\2190"; /* Unicode arrow character */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #33FF57;
+    visibility: visible;
+}
+.centered-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
