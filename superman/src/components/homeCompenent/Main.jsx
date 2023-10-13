@@ -9,6 +9,9 @@ import ImageSeven from '../../photos/images/img7.png'
 import ImageHeight from '../../photos/images/img8.png'
 import ImageNine from '../../photos/images/img9.png'
 import ImageTen from '../../photos/images/img10.png'
+import ImageTwelve from '../../photos/images/img12.png'
+import ImageThirteen from '../../photos/images/img13.png'
+import ImageFourteen from '../../photos/images/img14.png'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 
@@ -37,7 +40,7 @@ return (
         </main>
         <section className='h-[130dvh] flex flex-col items-center w-full px-[3rem] bg-gradient-to-br from-[#000000] to-[#06090e]'>
             <div className='w-full h-[80dvh] px-[2rem] bgImageEleven grayscale'>
-                <article className='w-full h-[100dvh] bg-black/75 border'>
+                <article className='w-full h-[100dvh] bg-black/75'>
                     <h1 className='text-white font-rajdhani text-[36px]'>BATMAN V SUPERMAN</h1>
                     <p className='text-white font-cantarell text-justify my-4'>Le monde n’est pas assez grand pour deux super héros. Alors que Superman se battait contre Zod, l’affrontement fait des dégats et détruit partiellement la ville de Métropolis. Bruce Wayne alors présent dans la ville assiste, impuissant, à l’effondrement de la ville qui fait beaucoup de victimes. Wayne est alors persuadé que Superman causera un jour la perte de l'Humanité et qu'il est inévitable de se préparer à l'éliminer. Devenu méfiant il se demande si l'homme de fer, cet extraterrestre de Krypton, qui peut à lui seul détruire le monde d'une simple pichenette, décidera un jour de ne plus défendre la Terre, voire même de causer sa perte.</p>
                     <p className='text-white mb-4 font-cantarell text-justify'>De son côté Superman d’une part cherche à se défendre mais retourne l’offensive contre Batman. Ce dernier n'est plus que l'ombre de lui-même. Devenu un justicier impitoyable, mégalomane et cruel à la suite du meurtre de son ancien partenaire Robin par le Joker, il n'hésite plus à violer son code moral en éliminant et marquant au fer les criminels. Superman souhaite simplement lui rappeler le code moral des “justicier” en usant de la force s’il le faut pour que Batman cesse son comportement abusif.</p>
@@ -49,22 +52,31 @@ return (
             <Splide aria-label="My Favorite Images" className='border border-red-400' options={{ width: "80%", height: "40dvh", gap: '1rem',}}>
                 <SplideSlide>
                 <div className="centered-slide">
-                    <div className="border border-red-400 h-[40vh] w-[600px]">
-                        {/* Your content for the first slide */}
+                    <div className="flex rounded-r-md bg-gradient-to-br from-[#19587D] to-[#193C7D] h-[40vh] w-[600px]">
+                        <div className='w-[40%]'>
+                            <img src={ImageTwelve} alt="pic" className='object-cover h-[40dvh]' />
+                        </div>
+                        <article className='w-[60%]'></article>
                     </div>
                 </div>
                 </SplideSlide>
                 <SplideSlide>
                 <div className="centered-slide">
-                    <div className="border border-blue-400 h-[40vh] w-[600px]">
-                        {/* Your content for the first slide */}
+                    <div className="flex bg-gradient-to-br rounded-r-md from-[#19587D] to-[#193C7D] h-[40vh] w-[600px]">
+                        <div className='w-[40%]'>
+                            <img src={ImageThirteen} alt="pic" className='object-cover h-[40dvh]' />
+                        </div>
+                        <article className='w-[60%]'></article>
                     </div>
                 </div>
                 </SplideSlide>
                 <SplideSlide>
                 <div className="centered-slide">
-                    <div className="border border-gray-400 h-[40vh] w-[600px]">
-                        {/* Your content for the third slide */}
+                    <div className="flex bg-gradient-to-br rounded-r-md from-[#19587D] to-[#193C7D] h-[40vh] w-[600px]">
+                        <div className='w-[40%]'>
+                            <img src={ImageFourteen} alt="pic" className='object-cover h-[40dvh]' />
+                        </div>
+                        <article className='w-[60%]'></article>
                     </div>
                 </div>
                 </SplideSlide>
