@@ -23,27 +23,55 @@
 /* Change the right arrow icon */
 .splide__arrow--next{
     visibility: hidden; /* Change the arrow color */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 0 18px 44px;
+    border-color: transparent transparent transparent #19587D;
 }
 .splide__arrow--next::before{
     visibility: visible;
-    content: "\2192"; /* Unicode arrow character */
-    font-size: 24px; /* Adjust the font size as needed */
-    color: #FF5733;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 0 18px 44px;
+    border-color: transparent transparent transparent #19587D;
 }
 
   /* Change the left arrow icon */
 .splide__arrow--prev{
     visibility: hidden;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 44px 18px 0;
+    border-color: transparent #19587D transparent transparent;
 }
 .splide__arrow--prev::before{
-    content: "\2190"; /* Unicode arrow character */
-    font-size: 24px; /* Adjust the font size as needed */
-    color: #33FF57;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 44px 18px 0;
+    border-color: transparent #19587D transparent transparent;
     visibility: visible;
+}
+.splide__pagination__page{
+    visibility: hidden;
 }
 .centered-slide {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+.bgContact{
+    background: url(../src/photos/images/img16.png) no-repeat center center/cover;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #7C7675, #193C7D, #7C7675);
+    border-image-slice: 1;
 }

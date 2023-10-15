@@ -12,6 +12,8 @@ import ImageTen from '../../photos/images/img10.png'
 import ImageTwelve from '../../photos/images/img12.png'
 import ImageThirteen from '../../photos/images/img13.png'
 import ImageFourteen from '../../photos/images/img14.png'
+import ImageFiteen from '../../photos/images/img15.png'
+import Video from '../../video/video.mp4'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 
@@ -49,38 +51,77 @@ return (
                     </section>
                 </article>
             </div>
-            <Splide aria-label="My Favorite Images" className='border border-red-400' options={{ width: "80%", height: "40dvh", gap: '1rem',}}>
+            <Splide aria-label="My Favorite Images" options={{ width: "80%", height: "40dvh", gap: '1rem',}}>
                 <SplideSlide>
                 <div className="centered-slide">
                     <div className="flex rounded-r-md bg-gradient-to-br from-[#19587D] to-[#193C7D] h-[40vh] w-[600px]">
-                        <div className='w-[40%]'>
+                        <div className='w-[35%]'>
                             <img src={ImageTwelve} alt="pic" className='object-cover h-[40dvh]' />
                         </div>
-                        <article className='w-[60%]'></article>
+                        <article className='w-[65%] flex flex-col gap-1 justify-center'>
+                            <p className='font-cantarell text-white text-[16px] uppercase'>Action, Adventure</p>
+                            <h2 className='font-cantarell text-white text-[20px]'>Superman Man of Steel</h2>
+                            <h2 className='text-white font-bold text-[20px]'>IMDB: <span className='text-[#F1C530]'>7.1</span></h2>
+                            <p className='font-cantarell text-white text-[16px]'>Clark Kent, malgré son apparence humaine normale, est l'un des derniers membres d'une race éteinte. Il se retrouve forcé de révéler son identité lorsque la Terre est envahie par une armée de survivants qui menacent détruire la planète.</p>
+                        </article>
                     </div>
                 </div>
                 </SplideSlide>
                 <SplideSlide>
                 <div className="centered-slide">
                     <div className="flex bg-gradient-to-br rounded-r-md from-[#19587D] to-[#193C7D] h-[40vh] w-[600px]">
-                        <div className='w-[40%]'>
+                        <div className='w-[35%]'>
                             <img src={ImageThirteen} alt="pic" className='object-cover h-[40dvh]' />
                         </div>
-                        <article className='w-[60%]'></article>
+                        <article className='w-[65%]  flex flex-col gap-3 justify-center'>
+                            <p className='font-cantarell text-white text-[16px] uppercase'>Action, Adventure</p>
+                            <h2 className='font-cantarell text-white text-[20px]'>Superman (1978)</h2>
+                            <h2 className='text-white font-bold text-[20px]'>IMDB: <span className='text-[#F1C530]'>7.4</span></h2>
+                            <p className='font-cantarell text-white text-[16px]'>Un orphelin extra-terrestre est envoyé de sa planète mourante sur Terre, où il grandit et devient le premier et le plus grand super-héros de sa planète d'adoption.</p>
+                        </article>
                     </div>
                 </div>
                 </SplideSlide>
                 <SplideSlide>
                 <div className="centered-slide">
-                    <div className="flex bg-gradient-to-br rounded-r-md from-[#19587D] to-[#193C7D] h-[40vh] w-[600px]">
-                        <div className='w-[40%]'>
+                    <div className="flex bg-gradient-to-br rounded-r-md from-[#21465c] to-[#193C7D] h-[40vh] w-[600px]">
+                        <div className='w-[35%]'>
                             <img src={ImageFourteen} alt="pic" className='object-cover h-[40dvh]' />
                         </div>
-                        <article className='w-[60%]'></article>
+                        <article className='w-[65%] flex flex-col gap-3 justify-center'>
+                            <p className='font-cantarell text-white text-[16px] uppercase'>Action, Adventure</p>
+                            <h2 className='font-cantarell text-white text-[20px]'>Batman V Superman</h2>
+                            <h2 className='text-white font-bold text-[20px]'>IMDB: <span className='text-[#F1C530]'>6.4</span></h2>
+                            <p className='font-cantarell text-white text-[16px]'>Craignant que les actions de Superman ne soient pas contrôlées, Batman affronte l'homme d'acier, tandis que le monde débat du type de héros dont il a vraiment besoin.</p>
+                        </article>
                     </div>
                 </div>
                 </SplideSlide>
             </Splide>
+        </section>
+        <section className='w-full h-[100dvh] flex justify-center items-center bg-gradient-to-br from-[#000000] to-[#06090e]'>
+            <div className='w-[70%] h-[90dvh]'>
+                <video src={Video} autoplay controls poster={ImageFiteen} className='object-cover' type="video/mp4"> </video>
+            </div>
+        </section>
+        <section className='bgContact w-full h-[100dvh]'>
+            <div className='w-full h-[100dvh] flex justify-center items-center bg-[#193C7D]/75 '>
+                <section className='w-[66%] h-[100dvh] border'>
+                    <h1 className='text-white font-rajdhani text-[36px] text-center my-2'>PRENONS CONTACT</h1>
+                    <form>
+                        <div className='flex flex-col'>
+                            <label for="email" className="text-white font-cantarell text-[22px] uppercase my-2">Adresse email</label>
+                            <input type="email" name="depuis de l'email" id="email" placeholder="Adresse email" className='w-full h-[2rem] bg-transparent text-white font-cantarell outline-none border-b' required/>
+                        </div>
+                        <h1 className='text-white font-cantarell text-[22px] my-3'>NEWSLETTER</h1>
+                    </form>
+                </section>
+            </div>
+        </section>
+        <section className='w-full h-[70dvh] relative bg-gradient-to-br from-[#21465c] to-[#193C7D]'>
+            <div></div>
+            <article></article>
+            <div></div>
         </section>
     </>
     
