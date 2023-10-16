@@ -13,11 +13,36 @@ import ImageTwelve from '../../photos/images/img12.png'
 import ImageThirteen from '../../photos/images/img13.png'
 import ImageFourteen from '../../photos/images/img14.png'
 import ImageFiteen from '../../photos/images/img15.png'
+import GuillemetOne from '../../photos/logo/icon_guillemets_1.png'
+import GuillemetTwo from '../../photos/logo/icon_guillemets_2.png'
 import Video from '../../video/video.mp4'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
+import Slides from './Slides'
+
+const slides = [
+    {
+        quoteOne: "- Que représente le S ?",
+        quoteTwo:"- Ce n’est pas un S. Sur ma planète cela signifie espoir.",
+        quoteThree: "",
+        author: "Man Of Steel, Lois Lane et Clark Kent.",
+    },
+    {
+        quoteOne: "Il y eu des temps célestes, les temps d’avant, emplit de merveilles : des diamants de la plus",
+        quoteTwo: "belle eau. Plus dure est la chute, la chute sur Terre, et ce qui chute est déchu. Dans mon",
+        quoteThree: "rêve, elles m’emportaient vers la lumière. Sublime mensonge !",
+        author: "Batman v Superman : l’Aube de la Justice, Batman.",
+    },
+    {
+        quoteOne: "- Vous félicitez le plus grand criminel de tous les temps ? Vous ne pouvez pas dire « brillant",
+        quoteTwo: "» ? Non, ce serait trop banal, je vous l’accorde. Charismatique, génie surdoué.",
+        quoteThree: "- Moi, je dirais « tordu ».",
+        author: "Superman, Lex Luthor et Eve Teschmacher. ",
+    }
+];
 
 function Main() {
+
     const gallery1Images = [
         ImageTwo,
         ImageThree,
@@ -106,7 +131,7 @@ return (
         </section>
         <section className='bgContact w-full h-[100dvh]'>
             <div className='w-full h-[100dvh] flex justify-center items-center bg-[#193C7D]/75 '>
-                <section className='w-[66%] h-[100dvh] border'>
+                <section className='w-[66%] h-[100dvh]'>
                     <h1 className='text-white font-rajdhani text-[36px] text-center my-2'>PRENONS CONTACT</h1>
                     <form>
                         <div className='flex flex-col'>
@@ -114,14 +139,49 @@ return (
                             <input type="email" name="depuis de l'email" id="email" placeholder="Adresse email" className='w-full h-[2rem] bg-transparent text-white font-cantarell outline-none border-b' required/>
                         </div>
                         <h1 className='text-white font-cantarell text-[22px] my-3'>NEWSLETTER</h1>
+                        <div class="my-1">
+                            <label for="news" className="font-cantarell text-[#C4C4C4]">En cochant cette case vous acceptez de recevoir l’actualité concernant les <br/> aventures de Batman :</label>
+                            <input type="checkbox" name="verifier-nouvelle" value="news-letter" id="news" className='indent-0.5 accent-[#F1C530] mx-1'/>
+                        </div>
+                        <div className="flex flex-col my-1">
+                        <label for="receive-news" title="recevoir du nouvelle"></label>
+                            <select name="recevoir-nouvelle" className='w-full h-[2rem] bg-transparent outline-none border-b font-cantarell text-[#C1C1C1]'>
+                                <option value="Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter" selected>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter:</option>
+                                <option value="Une fois par semaine">Une fois par semaine</option>
+                                <option value="Une fois toutes les deux semaines (2 fois par mois)">Une fois toutes les deux semaines (2 fois par mois)</option>
+                                <option value="Une fois par mois">Une fois par mois</option>
+                                <option value="Une fois toutes les trois mois">Une fois toutes les trois mois</option>
+                                <option value="Une fois toutes les six mois">Une fois toutes les six mois</option>
+                            </select>
+                        </div>
+                        <div className="flex flex-col">
+                            <label for="ask-question-receive-news"></label>
+                            <input className='my-2 w-full h-[2rem] bg-transparent outline-none border-b font-cantarell text-[#C1C1C1]' type="text" id="ask-question-receive-news" name="demande recevoir une nouvelle" placeholder="Souhaitez vous recevoir des news "/>
+                        </div>
+                        <div className="w-full h-[6rem] flex justify-center items-center">
+                            <input type="button" value="Des films"/>
+                            <input type="button" value="Des comics"/>
+                            <input type="button" value="De tout"/>
+                        </div>
+                        <div className="flex flex-col my-2">
+                            <label for="commentaire" className='text-white font-cantarell text-[22px] uppercase'>message</label>
+                            <textarea name="commentaire pour les communaute" id="commentaire"  className="w-full resize-none h-[2rem] my-2 bg-transparent border-b text-[#C1C1C1]" placeholder="Laissez un commentaire pour la communauté"></textarea>
+                        </div>
+                        <div className="w-full h-[3rem] flex justify-center items-center">
+                            <input type="submit" value="CONFIRMER" className="p-2.5 italic bg-[#07338C] rounded-md text-white cursor-pointer  font-rajdhani text-[20px]" />
+                        </div>
                     </form>
                 </section>
             </div>
         </section>
-        <section className='w-full h-[70dvh] relative bg-gradient-to-br from-[#21465c] to-[#193C7D]'>
-            <div></div>
-            <article></article>
-            <div></div>
+        <section className='w-full h-[70dvh] flex relative justify-center items-center bg-gradient-to-br from-[#21465c] to-[#193C7D]'>
+            <div className='w-fit absolute top-[15%] left-[20%]'>
+                <img src={GuillemetOne} alt="guillemet one" />
+            </div>
+            <Slides slides={slides} />
+            <div className='w-fit absolute bottom-[15%] right-[20%]'>
+                <img src={GuillemetTwo} alt="guillemet two" />
+            </div>
         </section>
     </>
     
