@@ -8,12 +8,12 @@ function Navbar() {
     const { pathname } = location;
     const splitLocation = pathname.split("/");
 return (
-    <nav className='w-[100%] p-[1rem] '>
+    <nav className='w-[100%] p-[1rem] sm:max-md:bg-[#C1C1C1]'>
         <div className='w-[100%] h-[20dvh] p-[0 5rem] flex items-center justify-around'>
-            <Link to="/" className='md:max-lg:scale-[0.7] lg:max-xl:scale-[0.8]'>
+            <Link to="/" className='sm:max-md:scale-[0.6] md:max-lg:scale-[0.7] lg:max-xl:scale-[0.8]'>
                 <img src={Logo} alt="logo" className="h-auto w-[10rem]" />
             </Link>
-            <ul className="uppercase flex gap-[1em] text-white font-sans text-xl antialiased font-semibold">
+            <ul className="sm:max-md:border uppercase flex gap-[1em] text-white font-sans text-xl antialiased font-semibold">
                 <li className={splitLocation[1] === "" ? "border-b-[1.5px] border-white" : ""}>
                     <Link to="/">home</Link>
                 </li>

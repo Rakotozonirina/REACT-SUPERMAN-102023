@@ -98,3 +98,8 @@ input[type=button]:hover {
     color: #ffffff;
     background-clip: border-box;
 }
+/*@media (max-width:640px) and (max-width:768px){
+    .splide__arrow--prev::before{
+        transform: scale(0.7);
+    }
+}*/
