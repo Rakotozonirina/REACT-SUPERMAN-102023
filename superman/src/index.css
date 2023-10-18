@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgImageOne{
+    background: url(../src/photos/images/img1.png) no-repeat center center/cover;
+}
+.bgImageEleven{
+    background: url(../src/photos/images/img11.png) no-repeat center center/cover;
+}
+@font-face {
+    font-family: "Adventure";
+    src: url("../src/fonts/Adventure.otf");
+}
+@font-face {
+    font-family: "Rajdhani-Bold";
+    src: url("../src/fonts/Rajdhani-Bold.ttf");
+}
+@font-face {
+    font-family: "Cantarell-Regular";
+    src: url("../src/fonts/Cantarell-Regular.ttf");
+}
+/* Change the right arrow icon */
+.splide__arrow--next{
+    visibility: hidden; /* Change the arrow color */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 0 18px 44px;
+    border-color: transparent transparent transparent #19587D;
+}
+.splide__arrow--next::before{
+    visibility: visible;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 0 18px 44px;
+    border-color: transparent transparent transparent #19587D;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* Change the left arrow icon */
+.splide__arrow--prev{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 44px 18px 0;
+    border-color: transparent #19587D transparent transparent;
 }
+.splide__arrow--prev::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 44px 18px 0;
+    border-color: transparent #19587D transparent transparent;
+    visibility: visible;
+}
+.splide__pagination__page{
+    visibility: hidden;
+}
+.centered-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.bgContact{
+    background: url(../src/photos/images/img16.png) no-repeat center center/cover;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #7C7675, #193C7D, #7C7675);
+    border-image-slice: 1;
+}
+input[type=button] {
+    padding: 0.8rem 2rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #C4C4C4;
+    position: relative;
+    border: 3px solid transparent;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(0.25turn, rgba(237, 222, 191, 0.4), rgba(25, 88, 125, 0.4));
+    background-image: linear-gradient(0.25turn, rgba(237, 222, 191, 0.4), rgba(25, 88, 125, 0.4));
+    background-origin: border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #C4C4C4;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    color: #ffffff;
+    background-clip: border-box;
+}
+/*@media (max-width:640px) and (max-width:768px){
+    .splide__arrow--prev::before{
+        transform: scale(0.7);
+    }
+}*/
