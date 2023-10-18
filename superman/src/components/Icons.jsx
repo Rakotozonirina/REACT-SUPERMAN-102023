@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 function Icons() {
 return (
-    <div className='absolute top-[48%] left-[21.5%] h-[40dvh] flex flex-col gap-20'>
+    <div className='sm:max-md:left-[14%] absolute top-[48%] left-[21.5%] h-[40dvh] flex flex-col gap-20'>
         <Link to="" >
             <img src={facebookIcon} alt="facebook Icons" />
         </Link>
