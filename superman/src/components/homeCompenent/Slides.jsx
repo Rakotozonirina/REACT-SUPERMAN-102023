@@ -11,7 +11,7 @@ function Slides({slides}) {
 return (
     <div className='w-full flex flex-col gap-4 justify-center items-center'>
         {slides.map((slide, index) => (
-            <div key={index} className={`w-fit ${currentIndex === index ? 'block' : 'hidden'}`}>
+            <div key={index} className={`w-fit ${currentIndex === index ? 'block max-sm:px-[2em]' : 'hidden'}`}>
                 <Quote {...slide}/>
             </div>
         ))}

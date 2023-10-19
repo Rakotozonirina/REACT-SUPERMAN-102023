@@ -10,7 +10,7 @@ import IconTw from '../photos/logo/icon_tw.png'
 function Footer() {
 return (
     <footer className='w-full h-[40dvh] bg-gradient-to-br from-[#21465c] to-[#193C7D]'>
-        <article className='w-full h-[20dvh] flex justify-center items-center gap-2'>
+        <article className='w-full h-[20dvh] max-sm:px-[2em] max-sm:text-center flex justify-center items-center gap-2'>
             <div>
                 <img src={IconWB} alt="icon WB" />
             </div>
